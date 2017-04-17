@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @image.title %></dd>
   <dt></dt>
-  <dd><%= image_tag @image.picture.url if @image.picture? %></dd>
+  <dd><%= image_tag(@image.picture.url, size: "300x300") if @image.picture? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_name) %>:</strong></dt>
   <dd><%= @image.artist_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_age) %>:</strong></dt>

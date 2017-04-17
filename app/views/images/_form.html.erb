@@ -25,7 +25,8 @@
   <div class="form-group">
     <%= f.label :picture, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :picture, :class => 'form-control' %>
+      <%= f.file_field :picture %>
+      <%= f.hidden_field :picture_cache %>
     </div>
     <%=f.error_span(:picture) %>
   </div>
@@ -44,11 +45,11 @@
     <%=f.error_span(:artist_age) %>
   </div>
   <div class="form-group">
-    <%= f.label :user_id, :class => 'control-label col-lg-2' %>
+    <%= f.label :artist_country, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :user_id, :class => 'form-control' %>
+      <%= f.text_field :artist_country, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:user_id) %>
+    <%=f.error_span(:artist_country) %>
   </div>
 
   <div class="form-group">

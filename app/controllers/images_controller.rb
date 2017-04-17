@@ -25,6 +25,7 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
+    @image.user_id = current_user.id
 
     respond_to do |format|
       if @image.save
@@ -69,6 +70,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:title, :picture, :artist_name, :artist_age, :artist_country, :user_id)
+      params.require(:image).permit(:title, :picture, :picture_cache, :artist_name, :artist_age, :artist_country, :user_id)
     end
 end

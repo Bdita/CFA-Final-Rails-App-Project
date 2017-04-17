@@ -6,8 +6,8 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @image.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:picture) %>:</strong></dt>
-  <dd><%= @image.picture %></dd>
+  <dt></dt>
+  <dd><%= image_tag @image.picture.url if @image.picture? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_name) %>:</strong></dt>
   <dd><%= @image.artist_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_age) %>:</strong></dt>

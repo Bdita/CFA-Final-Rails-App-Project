@@ -64,10 +64,16 @@ class ImagesController < ApplicationController
   end
 
   def download
-  doodle = params[:url]
-  file =   "#{Rails.root}/tmp/#{doodle}"
-  send_file(file, :type => "image/png", :disposition => 'attachment')
-end
+       @doodle = params[:url].split('/').last
+
+       s3 = Aws::S3::Resource.new(region:"ap-southeast-2",
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_ACCESS_KEY_ID'],
+    )
+
+   obj = s3.bucket('S3_BUCKET').object(@doodle)
+   obj.get(:response_target=>'./path/to/file')
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

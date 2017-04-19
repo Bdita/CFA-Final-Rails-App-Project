@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+       @image.picture
   end
 
   # GET /images/new
@@ -61,6 +62,12 @@ class ImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def download
+  doodle = params[:url]
+  file =   "#{Rails.root}/tmp/#{doodle}"
+  send_file(file, :type => "image/png", :disposition => 'attachment')
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

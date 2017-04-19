@@ -10,7 +10,6 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
-       @image.picture
   end
 
   # GET /images/new
@@ -61,18 +60,6 @@ class ImagesController < ApplicationController
       format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def download
-       @doodle = params[:url].split('/').last
-
-       s3 = Aws::S3::Resource.new(region:"ap-southeast-2",
-      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-      secret_access_key: ENV['AWS_ACCESS_KEY_ID'],
-    )
-
-   obj = s3.bucket('S3_BUCKET').object(@doodle)
-   obj.get(:response_target=>'./path/to/file')
   end
 
   private

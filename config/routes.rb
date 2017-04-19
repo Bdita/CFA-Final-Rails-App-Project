@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :images do
-       get 'download',
-       on: :member
-  end
+  resources :images
   devise_for :users
   root 'pages#home'
 

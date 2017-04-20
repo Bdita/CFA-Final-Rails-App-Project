@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :images
+  resources :images do
+       member do
+            get 'download'
+       end
+  end
   devise_for :users
   root 'pages#home'
 

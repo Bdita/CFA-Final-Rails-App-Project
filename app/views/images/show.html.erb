@@ -1,3 +1,4 @@
+<!-- <a href="	https://s3-ap-southeast-2.amazonaws.com/dreamdoodledesignimages/uploads/image/picture/4/mandala-1778395_640.png" target="_blank"download="filename">download</a>#" + #<a href="	https://s3-ap-southeast-2.amazonaws.com/dreamdoodledesignimages/uploads/image/picture/4/mandala-1778395_640.png" target="_blank"download="filename">download</a> -->
 <%- model_class = Image -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
@@ -8,6 +9,8 @@
   <dd><%= @image.title %></dd>
   <dt></dt>
   <dd><%= image_tag(@image.picture.url) if @image.picture? %></dd>
+  <dt></dt>
+       <a href="https://s3-ap-southeast-2.amazonaws.com/<%= ENV['S3_BUCKET']%><%= @image.picture.url%>"   target="_blank" download="filename">download</a>
   <dt><strong><%= model_class.human_attribute_name(:artist_name) %>:</strong></dt>
   <dd><%= @image.artist_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_age) %>:</strong></dt>

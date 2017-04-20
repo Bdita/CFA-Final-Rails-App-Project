@@ -10,7 +10,7 @@
   <dt></dt>
   <dd><%= image_tag(@image.picture.url) if @image.picture? %></dd>
   <dt></dt>
-       <a href="https://s3-ap-southeast-2.amazonaws.com/<%= ENV['S3_BUCKET']%><%= @image.picture.url%>"   target="_blank" download="filename">download</a>
+  <dd><a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_name) %>:</strong></dt>
   <dd><%= @image.artist_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:artist_age) %>:</strong></dt>

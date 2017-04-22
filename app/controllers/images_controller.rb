@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+        @images = Image.all
   end
 
   # GET /images/1
@@ -19,6 +19,7 @@ class ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
+       authorize @image unless current_user.has_role? :admin
   end
 
   # POST /images
@@ -26,7 +27,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
     @image.user_id = current_user.id
-
+    authorize @image
     respond_to do |format|
       if @image.save
         format.html { redirect_to @image, notice: 'Image was successfully created.' }
@@ -41,6 +42,7 @@ class ImagesController < ApplicationController
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update
+       authorize @image unless current_user.has_role? :admin
     respond_to do |format|
       if @image.update(image_params)
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
@@ -55,13 +57,14 @@ class ImagesController < ApplicationController
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
+       authorize @image unless current_user.has_role? :admin
     @image.destroy
     respond_to do |format|
       format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
-  
+
 private
     # Use callbacks to share common setup or constraints between actions.
     def set_image

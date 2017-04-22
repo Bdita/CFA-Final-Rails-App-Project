@@ -1,0 +1,22 @@
+.image-container {
+     margin-top: 2.5%;
+}
+img {
+     display: block;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    box-shadow: 0 1px 3px rgba(0,0,30,.10);
+    position: relative;
+}
+
+.image-description {
+     margin: 0 10% 0 10%;
+}
+.image-description .title{
+     margin: 5% 0 0 0;
+     padding: 0% 5% 0 5%;
+}
+.image-description .content {
+     padding: 0% 5% 2.5% 5%;
+}

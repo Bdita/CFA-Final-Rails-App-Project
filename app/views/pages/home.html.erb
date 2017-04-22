@@ -1,2 +1,5 @@
 <h1>Welcome to Dream, Doodle, Design App</h1>
-<p>Ready for inital commit</p>
+
+<% @images.each do |image| %>
+     <%= link_to image_tag(image.picture.url), image_path(image) %>
+<% end%>

@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+       authorize@image
   end
 
   # GET /images/new
@@ -19,6 +20,7 @@ class ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
+       authorize@image
   end
 
   # POST /images
@@ -41,6 +43,7 @@ class ImagesController < ApplicationController
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update
+    authorize@image
     respond_to do |format|
       if @image.update(image_params)
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
@@ -55,13 +58,14 @@ class ImagesController < ApplicationController
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
+     authorize@image
     @image.destroy
     respond_to do |format|
       format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
-  
+
 private
     # Use callbacks to share common setup or constraints between actions.
     def set_image

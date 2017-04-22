@@ -21,7 +21,7 @@
       <tr>
         <td><%= link_to image.id, image_path(image) %></td>
         <td><%= image.title %></td>
-        <td><%= image_tag image.picture.url, size: "100x100"%></td>
+        <td><%= image_tag(image.picture.url, size: "100x100") if image.picture?%></td>
         <td><%= image.artist_name %></td>
         <td><%= image.artist_age %></td>
         <td><%= image.artist_country %></td>

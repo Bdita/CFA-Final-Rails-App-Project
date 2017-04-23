@@ -1,30 +1,27 @@
-<!-- <a href="	https://s3-ap-southeast-2.amazonaws.com/dreamdoodledesignimages/uploads/image/picture/4/mandala-1778395_640.png" target="_blank"download="filename">download</a>#" + #<a href="	https://s3-ap-southeast-2.amazonaws.com/dreamdoodledesignimages/uploads/image/picture/4/mandala-1778395_640.png" target="_blank"download="filename">download</a> -->
-<%- model_class = Image -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+<div class = "container">
+     <div class="row">
+          <div class="col-md-12 col-lg-12 col-sm-12">
+               <div class="image-container">
+                    <img src = "<%= @image.picture.url%>" class="img-responsive">
+                    <!-- <%= image_tag(@image.picture.url) if @image.picture? %> -->
+               </div>
+          </div>
+
+          <div class = "col-md-12 col-lg-12 col-sm-12">
+               <div class = "image-description">
+                    <h5 class = "title text-center"> <%= @image.title %> </h5>
+                    <hr>
+                    <h6 class = "content"> How awesome is this art work by <%= @image.artist_name %>, a <%= @image.artist_age %> yrs old child from  <%= @image.artist_country %>.
+                         If you want to support the local organisation working with these little artists, please support our cause. And you think this work is what you need
+                         for your next project, hit the button below. </h6>
+               </div>
+
+               <div class = "action">
+                    <p class = "text-center"><a href="#" class="btn btn-success" role="button">Link Button</a></p>
+               </div>
+          </div>
+     </div>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @image.title %></dd>
-  <dt></dt>
-  <dd><%= image_tag(@image.picture.url) if @image.picture? %></dd>
-  <dt></dt>
-  <dd><a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a></dd>
-  <dt><strong><%= model_class.human_attribute_name(:artist_name) %>:</strong></dt>
-  <dd><%= @image.artist_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:artist_age) %>:</strong></dt>
-  <dd><%= @image.artist_age %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @image.user_id %></dd>
-</dl>
 
-<!-- <%= link_to t('.back', :default => t("helpers.links.back")),
-              images_path, :class => 'btn btn-default'  %> -->
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_image_path(@image), :class => 'btn btn-default' %>
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              image_path(@image),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+       <a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a>

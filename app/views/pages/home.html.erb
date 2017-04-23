@@ -1,5 +1,49 @@
-<h1>Welcome to Dream, Doodle, Design App</h1>
+<body class = "background-noise">
+     <div class="container">
+          <div class = "row">
+               <div class="col-md-12 col-lg-12 col-sm-12">
+                         <img src = 'http://res.cloudinary.com/dihqhbf9i/image/upload/v1492930747/My_Doodle_lv4mvi.png' class = "img-responsive">
+               </div>
+          </div>
 
-<% @images.each do |image| %>
-     <%= link_to image_tag(image.picture.url), image_path(image) %>
-<% end%>
+          <div class = "row">
+               <div class = "about-container">
+                    <h4 class = "text-center menu-title"> ABOUT US </h4>
+                    <hr>
+                    <div class = "row about-content">
+                         <div class = "col-lg-4 col-md-4 col-sm-4">
+                              <img src = "http://res.cloudinary.com/dihqhbf9i/image/upload/v1492949154/about_us_sk9lab.png" class ="img-responsive">
+                         </div>
+
+                         <div class = "col-lg-8 col-md-8 col-sm-8">
+                              <p class = "about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget mattis sem, ac tincidunt eros. Vivamus elementum elit ut viverra viverra. Vivamus vehicula ut erat eget imperdiet. Cras scelerisque luctus hendrerit. Aenean fringilla viverra mi vitae maximus. Sed hendrerit vulputate massa a accumsan. Curabitur lectus quam, rutrum sit amet tellus nec, blandit varius mi. Sed pretium odio id ipsum sodales maximus. Phasellus viverra sagittis mauris, vel rutrum nunc porta quis. Morbi efficitur accumsan urna, non. </p>
+                         </div>
+                    </div>
+                    <hr>
+               </div>
+          </div>
+
+          <div class = "row">
+               <div class = "img-collection">
+                    <h4 class = "img-collection-title"> Find images for your projects <span class = "actions"><a href = "#">Click here for more images >></a></span></h4>
+                    <div class = "img-card-parent">
+                              <% @images.each do |image| %>
+                                   <div class = "img-card-child">
+                                        <%= link_to image_tag(image.picture.url), image_path(image) %>
+                                   </div>
+                              <% end%>
+                         </div>
+                    </div>
+               </div>
+
+          <div class = "row">
+               <div class = "contact-container">
+                    <h4 class = "text-center menu-title"> CONTACT US </h4>
+                    <hr>
+                    <!--  insert contact form -->
+               </div>
+          </div>
+
+
+     </div> <!--container end-->
+</body>

@@ -14,3 +14,17 @@
  *= require_self
  *= require devise_bootstrap_views
  */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+
+$font-headlines: 'Lora', serif;
+
+.background-noise {
+     background-image: url(http://www.graphicartsunit.com/images/noise.png);
+}
+
+h1,h2,h3,h4,h5 {
+     font-style: italic;
+     font-family: $font-headlines;
+}

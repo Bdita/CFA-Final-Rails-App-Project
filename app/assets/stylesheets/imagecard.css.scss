@@ -1,3 +1,5 @@
+$font-headlines: 'Lora', serif;
+
 .image-container {
      margin-top: 2.5%;
 }
@@ -14,6 +16,7 @@ img {
      margin: 0 10% 0 10%;
 }
 .image-description .title{
+     font-weight: bold;
      margin: 5% 0 0 0;
      padding: 0% 5% 0 5%;
 }

@@ -17,8 +17,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,800');
 
 $font-headlines: 'Lora', serif;
+$font-paragraphs: 'Open Sans', sans-serif;
 
 .background-noise {
      background-image: url(http://www.graphicartsunit.com/images/noise.png);
@@ -27,4 +29,8 @@ $font-headlines: 'Lora', serif;
 h1,h2,h3,h4,h5 {
      font-style: italic;
      font-family: $font-headlines;
+}
+
+p {
+     font-family: $font-paragraphs;
 }

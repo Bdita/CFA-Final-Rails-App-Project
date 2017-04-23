@@ -1,27 +1,28 @@
-<div class = "container">
-     <div class="row">
-          <div class="col-md-12 col-lg-12 col-sm-12">
-               <div class="image-container">
-                    <img src = "<%= @image.picture.url%>" class="img-responsive">
-                    <!-- <%= image_tag(@image.picture.url) if @image.picture? %> -->
-               </div>
-          </div>
-
-          <div class = "col-md-12 col-lg-12 col-sm-12">
-               <div class = "image-description">
-                    <h5 class = "title text-center"> <%= @image.title %> </h5>
-                    <hr>
-                    <h6 class = "content"> How awesome is this art work by <%= @image.artist_name %>, a <%= @image.artist_age %> yrs old child from  <%= @image.artist_country %>.
-                         If you want to support the local organisation working with these little artists, please support our cause. And you think this work is what you need
-                         for your next project, hit the button below. </h6>
+<body class = "background-noise">
+     <div class = "container">
+          <div class="row">
+               <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="image-container">
+                         <img src = "<%= @image.picture.url%>" class="img-responsive">
+                         <!-- <%= image_tag(@image.picture.url) if @image.picture? %> -->
+                    </div>
                </div>
 
-               <div class = "action">
-                    <p class = "text-center"><a href="#" class="btn btn-success" role="button">Link Button</a></p>
+               <div class = "col-md-12 col-lg-12 col-sm-12">
+                    <div class = "image-description">
+                         <h4 class = "title text-center"> <%= @image.title %> </h4>
+                         <hr>
+                         <p class = "content"> How awesome is this art work by <%= @image.artist_name %>, a <%= @image.artist_age %> yrs old child from  <%= @image.artist_country %>.
+                              If you want to support the local organisation working with these little artists, please support our cause. And you think this work is what you need
+                              for your next project, hit the button below. </p>
+                    </div>
+
+                    <div class = "action">
+                         <p class = "text-center"><a href="#" class="btn btn-danger" role="button">Link Button</a></p>
+                    </div>
                </div>
           </div>
      </div>
-</div>
-
+</body>
 
        <a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a>

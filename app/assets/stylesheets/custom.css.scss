@@ -1,11 +1,23 @@
+.navbar {
+     background-color: transparent !important;
+     background-image: url(http://www.graphicartsunit.com/images/noise.png);
+     border: 0;
+     box-shadow: none;
+     margin-top: 1%;
+}
+.navbar .navbar-brand {
+     font-size: 20px !important;
+     font-family: 'Alfa Slab One', cursive;
+     color: #000000 !important;
+}
 .user-name {
+  margin-right: 50px;
   padding: 0 !important ;
   padding-left: 5px;
-  padding-top: 15px !important;
+  padding-top: 5px !important;
   text-align: center;
 
   a {
-      color: black !important;
       margin: 0 !important;
       padding: 5px!important;
   }
@@ -14,44 +26,44 @@
   }
 }
 
-.logout {
-  padding-left: 0;
-}
-
 .nav.navbar-right {
   padding-bottom: 10px;
   padding-top: 5px;
 }
-
-.nav.navbar-nav {
-  .navbar-link {
-    border-radius: 5px;
-    color: #fff;
-    margin-top: 15px;
-    padding: 8px;
-  }
-  .navbar-link:focus, .navbar-link:hover {
-    background: #3071a9;
-    color: #fff;
-  }
-  li a {
-    margin-right: 5px;
-  }
-}
-
 .nav.navbar-right li {
   .btn {
     color: #fff !important;
-    margin-top: 5%;
+    // margin-top: -10%;
   }
+  .btn-danger {
+      border-radius: 20em;
+      background-color : #ff78bb !important;
+      border: none !important;
+      font-family: lato, sans-serif;
+       font-weight: bold;
+       font-size: 1em;
+       letter-spacing: 0.1em;
+       text-decoration: none;
+       color: #fff !important;
+       margin-top: -10px;
+ }
   .btn-danger:hover, .btn-danger:focus {
-    background-color: darken(#d9534f,20%) !important;
+    background-color: darken(#ff78bb,5%) !important;
   }
-  .btn-primary:hover, .btn-primary:focus {
-    background-color: darken(#428bca,20%) !important;
-  }
+ .btn-default{
+      background-color: #fff !important;
+      border-radius: 75em;
+      border: 2.5px solid #ff78bb !important;
+      font-family: lato,sans-serif;
+       font-weight: bold;
+       font-size: 1em;
+       letter-spacing: 0.1em;
+       text-decoration: none;
+       color: #033b4b !important;
+       margin-top: -10px;
 }
-
-.btn-primary:visited, .btn-danger:visited {
-  color: #fff;
+  .btn-default:hover, .btn-default:focus {
+    background-color: #ff78bb !important;
+    color: #fff !important;
+  }
 }

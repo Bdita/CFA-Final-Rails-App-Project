@@ -5,6 +5,8 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
         @images = Image.all
+        @q = Image.ransack(params[:q])
+        @images = @q.result #(distinct: true)
   end
 
   # GET /images/1

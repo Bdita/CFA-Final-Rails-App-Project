@@ -17,12 +17,15 @@
                               for your next project, hit the button below. </p>
                     </div>
 
-                    <div class = "action">
-                         <p class = "text-center"><a href="#" class="btn btn-danger" role="button">Link Button</a></p>
+                    <div class = "action text-center">
+                         <%= render 'partials/chargeform' %>
+                         <!-- <p class = "text-center"><a href="#" class="btn btn-danger" role="button">Link Button</a></p> -->
                     </div>
                </div>
           </div>
      </div>
+
+     <%= render 'partials/msg' %>
 </body>
 
-       <a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a>
+       <!-- <a href="<%= @image.picture.url%>"   target="_blank" download="filename">download</a> -->

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :images do
        member do
-            get 'download'
+          resources :charges
+          get 'download'
        end
   end
   devise_for :users

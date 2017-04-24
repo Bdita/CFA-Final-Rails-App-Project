@@ -1,3 +1,8 @@
+<%= search_form_for @q do |f| %>
+     <%= f.label :artist_country_cont %>
+     <%= f.search_field :artist_country_cont %>
+     <%= f.submit %>
+<% end %>
 <%- model_class = Image -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>

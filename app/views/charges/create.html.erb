@@ -1,1 +1,8 @@
-<h2>Thanks, you paid <strong>$1.00</strong>!</h2>
+<div class = "container">
+     <div class = "charge-message text-center">
+          <h4>Thanks, you paid <strong>$1.00</strong>! Please click the button below to download the image. </h4>
+          <br>
+          <br>
+          <a href="<%= @image.picture.url%>" target="_blank" download="filename" class = "btn btn-custom">download</a>
+     </div>
+</div>

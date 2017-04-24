@@ -67,3 +67,45 @@
     color: #fff !important;
   }
 }
+.action {
+     display:block;
+}
+.btn-custom-square{
+     background-color: #fff !important;
+     border: 2.5px solid #ff78bb !important;
+     font-family: lato,sans-serif;
+      font-weight: bold;
+      font-size: 17px;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: #033b4b !important;
+      margin-top: -10px;
+      padding: 10px 20px 10px 20px;
+}
+
+.btn-custom-square:hover, .btn-custom-square:focus {
+ background-color: darken(#ff78bb, 10%) !important;
+ border-color: darken(#ff78bb, 10%) !important;
+ color: #fff !important;
+}
+
+.btn-custom-round {
+     border-radius: 20em;
+     background-color : darken(#ff78bb, 20%) !important;
+     border: none !important;
+     font-family: lato, sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: #fff !important;
+}
+ .btn-custom-round:hover, .btn-custom-round:focus {
+   background-color: darken(#ff78bb,10%) !important;
+ }
+
+
+.charge-message {
+     margin-top: 5%;
+     font-size: 18px;
+}

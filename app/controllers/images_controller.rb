@@ -42,7 +42,7 @@ class ImagesController < ApplicationController
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update
-       authorize @image unless current_user.has_role? :admin
+    authorize @image unless current_user.has_role? :admin
     respond_to do |format|
       if @image.update(image_params)
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
@@ -57,7 +57,7 @@ class ImagesController < ApplicationController
   # DELETE /images/1
   # DELETE /images/1.json
   def destroy
-       authorize @image unless current_user.has_role? :admin
+     authorize @image unless current_user.has_role? :admin
     @image.destroy
     respond_to do |format|
       format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }

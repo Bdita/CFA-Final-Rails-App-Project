@@ -1,14 +1,15 @@
 class ChargesController < ApplicationController
+
 def new
 end
 
 def show
-     @images = Images.all
 end
 
 def create
   # Amount in cents
   @amount = 100
+  @image = Image.find(params[:id])
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
     :source  => params[:stripeToken]

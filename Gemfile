@@ -27,6 +27,7 @@ gem 'fog'
 gem 'rolify'
 gem 'pundit'
 gem 'pry'
+gem 'stripe'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -1,31 +1,32 @@
-<body class = "background-noise">
+<body>
      <div class="container">
           <div class = "row">
                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                          <img src = 'http://res.cloudinary.com/dihqhbf9i/image/upload/v1492930747/My_Doodle_lv4mvi.png' class = "img-responsive">
                </div>
           </div>
+          <section id = "about-us">
+               <div class = "row">
+                    <div class = "about-container">
+                         <h4 class = "text-center menu-title"> ABOUT US </h4>
+                         <hr>
+                         <div class = "row about-content">
+                              <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                   <img src = "http://res.cloudinary.com/dihqhbf9i/image/upload/v1492949154/about_us_sk9lab.png" class ="img-responsive">
+                              </div>
 
-          <div class = "row">
-               <div class = "about-container">
-                    <h4 class = "text-center menu-title"> ABOUT US </h4>
-                    <hr>
-                    <div class = "row about-content">
-                         <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                              <img src = "http://res.cloudinary.com/dihqhbf9i/image/upload/v1492949154/about_us_sk9lab.png" class ="img-responsive">
+                              <div class = "col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                   <p class = "about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget mattis sem, ac tincidunt eros. Vivamus elementum elit ut viverra viverra. Vivamus vehicula ut erat eget imperdiet. Cras scelerisque luctus hendrerit. Aenean fringilla viverra mi vitae maximus. Sed hendrerit vulputate massa a accumsan. Curabitur lectus quam, rutrum sit amet tellus nec, blandit varius mi. Sed pretium odio id ipsum sodales maximus. Phasellus viverra sagittis mauris, vel rutrum nunc porta quis. Morbi efficitur accumsan urna, non. </p>
+                              </div>
                          </div>
-
-                         <div class = "col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                              <p class = "about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget mattis sem, ac tincidunt eros. Vivamus elementum elit ut viverra viverra. Vivamus vehicula ut erat eget imperdiet. Cras scelerisque luctus hendrerit. Aenean fringilla viverra mi vitae maximus. Sed hendrerit vulputate massa a accumsan. Curabitur lectus quam, rutrum sit amet tellus nec, blandit varius mi. Sed pretium odio id ipsum sodales maximus. Phasellus viverra sagittis mauris, vel rutrum nunc porta quis. Morbi efficitur accumsan urna, non. </p>
-                         </div>
+                         <hr>
                     </div>
-                    <hr>
                </div>
-          </div>
+          </section>
 
           <div class = "row">
                <div class = "img-collection">
-                    <h4 class = "img-collection-title"> Find images for your project <!--<span class = "actions"><a href = "#">Click here for more images >></a></span>--></h4>
+                    <h4 class = "img-collection-title text-center"> Find images for your project <!--<span class = "actions"><a href = "#">Click here for more images >></a></span>--></h4>
                     <div class = "img-card-parent">
                               <% @images.each do |image| %>
                                    <div class = "img-card-child">
@@ -35,15 +36,13 @@
                          </div>
                     </div>
                </div>
+               <hr>
+               <br>
 
-          <div class = "row">
-               <div class = "contact-container">
-                    <h4 class = "text-center menu-title"> CONTACT US </h4>
-                    <hr>
-                    <!--  insert contact form -->
-               </div>
-          </div>
-
-
+               <!-- contact form -->
+               <div id = "contact-us">
+                    <%= render 'partials/contactform' %>
+                    <br>
+               <div>
      </div> <!--container end-->
 </body>

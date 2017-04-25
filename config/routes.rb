@@ -6,6 +6,7 @@ Rails.application.routes.draw do
        end
   end
   devise_for :users
+  resources :contacts, only: [:new, :create]
   root 'pages#home'
   get 'admindashboard', to: 'pages#admindashboard'
   get 'ngodashboard', to: 'pages#ngodashboard'

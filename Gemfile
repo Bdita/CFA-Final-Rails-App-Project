@@ -29,6 +29,7 @@ gem 'pundit'
 gem 'pry'
 gem 'stripe'
 gem 'ransack'
+gem 'mail_form'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

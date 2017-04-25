@@ -18,13 +18,14 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,800');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700');
 
 $font-headlines: 'Lora', serif;
-$font-paragraphs: 'Open Sans', sans-serif;
+$font-paragraphs: 'Old Standard TT', serif;
 
-.background-noise {
-     background-image: url(http://www.graphicartsunit.com/images/noise.png);
-}
+// .background-noise {
+//      background-image: url(http://www.graphicartsunit.com/images/noise.png);
+// }
 
 h1,h2,h3,h4,h5 {
      font-style: italic;
@@ -33,4 +34,11 @@ h1,h2,h3,h4,h5 {
 
 p {
      font-family: $font-paragraphs;
+     font-size: 16px;
+}
+
+#footer {
+     font-size: 0.90em;
+     color: #696969;
+     margin-top: 5%;
 }

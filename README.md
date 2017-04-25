@@ -8,10 +8,10 @@ Now, let’s look at the opportunities and strengths they have.
 - They have local resource mobilisation and networking capacity.
 ### Solution
 An online platform to sell the doodles and drawings by disadvantaged children. Possibly, other digital products extended from those doodles and drawings in future. 
-> “Children can dream and they can doodle and draw.”
-“Art is recreation for children, but at the same time it can become a valuable >resource that can be mobilized for those little artist’s and their community >welfare.”
-“Digital products offer unique value as they are easy to produce and maintain as >opposed to physical goods, and are highly scalable.”
-“Same art can be used over and over again to generate funds.”
+###### “Children can dream and they can doodle and draw.”
+###### “Art is recreation for children, but at the same time it can become a valuable >resource that can be mobilized for those little artist’s and their community >welfare.”
+###### “Digital products offer unique value as they are easy to produce and maintain as >opposed to physical goods, and are highly scalable.”
+###### “Same art can be used over and over again to generate funds.”
 
 ### Installation Instruction
 This application is developed using ruby on rails. 

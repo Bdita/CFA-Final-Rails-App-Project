@@ -15,8 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav">
              <li><%= link_to "Home", root_path  %></li>
-             <li><%= link_to "About Us", "/path2"  %></li>
-             <li><%= link_to "Contact Us", "/path3"  %></li>
+             <li><%= link_to "About", root_path(:anchor => "about-us")  %></li>
+             <li><%= link_to "Contact", root_path(:anchor => "contact-us") %></li>
              <% if user_signed_in? %>
                   <% if current_user.has_role? :admin %>
                        <li><%= link_to 'Dashboard', admindashboard_path %></li>

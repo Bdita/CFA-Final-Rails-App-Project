@@ -9,7 +9,7 @@ $font-headlines: 'Lora', serif;
      margin-top: 5%;
 }
 .menu-title {
-     font-size: 25px;
+     font-size: 1.25em;
      font-weight: bold;
 }
 .about-content {
@@ -35,7 +35,6 @@ $font-headlines: 'Lora', serif;
 
      .img-card-parent {
           display: flex;
-          margin-top: 2.5%;
           width: 100%;
           height: auto;
           display: -ms-flexbox;
@@ -51,8 +50,8 @@ $font-headlines: 'Lora', serif;
                -webkit-box-flex: auto;
                -ms-flex: auto;
                flex: auto;
-               width: 300px;
-               margin: .8vw;
+               width: 200px;
+               margin: 3vw;
           }
                .img-card-child img {
                     width: 100%;

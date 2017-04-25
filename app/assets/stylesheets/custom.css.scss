@@ -1,9 +1,9 @@
 .navbar {
      background-color: transparent !important;
-     background-image: url(http://www.graphicartsunit.com/images/noise.png);
      border: 0;
      box-shadow: none;
      margin-top: 1%;
+     font-family: lato, sans-serif !important;
 }
 .navbar .navbar-brand {
      font-size: 20px !important;
@@ -16,6 +16,7 @@
   padding-left: 5px;
   padding-top: 5px !important;
   text-align: center;
+  font-family: lato, sans-serif;
 
   a {
       margin: 0 !important;
@@ -89,8 +90,7 @@
  color: #fff !important;
 }
 
-.btn-custom-round {
-     border-radius: 20em;
+.btn-custom-fill-square {
      background-color : darken(#ff78bb, 20%) !important;
      border: none !important;
      font-family: lato, sans-serif;
@@ -100,12 +100,24 @@
       text-decoration: none;
       color: #fff !important;
 }
- .btn-custom-round:hover, .btn-custom-round:focus {
+ .btn-custom-fill-square:hover, .btn-custom-fill-square:focus {
    background-color: darken(#ff78bb,10%) !important;
  }
-
 
 .charge-message {
      margin-top: 5%;
      font-size: 18px;
+}
+
+.btn-danger{
+     background-color : darken(#ff78bb, 30%) !important;
+     border: none !important;
+}
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #ff78bb !important;
+}
+
+.btn-danger:visited{
+     background-color : darken(#ff78bb, 30%) !important;
+     border: none !important;
 }

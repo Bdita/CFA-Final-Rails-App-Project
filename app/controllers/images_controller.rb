@@ -62,8 +62,13 @@ class ImagesController < ApplicationController
      authorize @image unless current_user.has_role? :admin
     @image.destroy
     respond_to do |format|
-      format.html { redirect_to images_url, notice: 'Image was successfully destroyed.' }
-      format.json { head :no_content }
+      if current_user.has_role? :ngo
+           format.html { redirect_to ngodashboard_path, notice: 'Image was successfully destroyed.' }
+           format.json { head :no_content }
+    elsif current_user.has_role? :admin
+         format.html { redirect_to admindashboard_path, notice: 'Image was successfully destroyed.' }
+         format.json { head :no_content }
+    end
     end
   end
 

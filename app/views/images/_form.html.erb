@@ -18,50 +18,50 @@
   <div class="form-group">
     <%= f.label :title, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :title, :class => 'form-control' %>
+      <%= f.text_field :title, :class => 'form-control', required: true%>
     </div>
     <%=f.error_span(:title) %>
   </div>
   <div class="form-group">
     <%= f.label :picture, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.file_field :picture %>
+      <%= f.file_field :picture, required: true %>
     </div>
     <%=f.error_span(:picture) %>
   </div>
   <div class="form-group">
     <%= f.label :artist_name, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :artist_name, :class => 'form-control' %>
+      <%= f.text_field :artist_name, :class => 'form-control', required: true %>
     </div>
     <%=f.error_span(:artist_name) %>
   </div>
   <div class="form-group">
     <%= f.label :artist_age, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :artist_age, :class => 'form-control' %>
+      <%= f.text_field :artist_age, :class => 'form-control', required: true %>
     </div>
     <%=f.error_span(:artist_age) %>
   </div>
   <div class="form-group">
     <%= f.label :artist_country, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :artist_country, :class => 'form-control' %>
+      <%= f.text_field :artist_country, :class => 'form-control', required: true %>
     </div>
     <%=f.error_span(:artist_country) %>
   </div>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.submit nil, :class => 'btn btn-custom-fill-square' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                images_path, :class => 'btn btn-default' %>
+                images_path, :class => 'btn btn-custom-fill-square' %>
     </div>
   </div>
 
 <% end %>
 
-
+<!-- Javascript for size validation -->
 <script type="text/javascript">
   $('#image_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;

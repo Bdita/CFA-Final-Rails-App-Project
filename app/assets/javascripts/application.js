@@ -15,3 +15,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+// for footer to stay at the buttom of the page

@@ -21,8 +21,12 @@
 
                             <div class="form-group">
                              <%= f.label :message %>
-                             <%= f.text_area :email, autofocus: true, class: 'form-control', placeholder: "Say Hello or Thank You" %>
+                             <%= f.text_area :message, autofocus: true, class: 'form-control', placeholder: "Say Hello or Thank You" %>
                           </div>
+                          <div class="form-group hidden">
+                              <%= f.label :nickname %>
+                              <%f.text_field :nickname, hint: 'leave this field blank'%>
+                         </div>
                           <div class = "form-action text-center">
                                <%= f.submit "Send!", class: 'btn btn-custom-square'%>
                          </div>

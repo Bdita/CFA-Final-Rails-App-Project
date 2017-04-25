@@ -17,7 +17,7 @@ $font-headlines: 'Lora', serif;
 }
 
 .about-description {
-     padding: 5%;
+     line-height: 1.5em;
 }
 
 // Images display section
@@ -61,12 +61,4 @@ $font-headlines: 'Lora', serif;
 // Contact us section
 .contact-container {
      margin-top: 5%;
-}
-
-
-@media screen and (max-width: 400px) {
- span {
-      display: hidden;
-}
-
 }

@@ -26,7 +26,6 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog'
 gem 'rolify'
 gem 'pundit'
-gem 'pry'
 gem 'stripe'
 gem 'ransack'
 gem 'mail_form'
@@ -50,6 +49,12 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # testing
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'pry'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do

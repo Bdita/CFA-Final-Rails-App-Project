@@ -25,14 +25,14 @@
   <div class="form-group">
     <%= f.label :picture, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.file_field :picture, required: true %>
+      <%= f.file_field :picture#, required: true %>
     </div>
     <%=f.error_span(:picture) %>
   </div>
   <div class="form-group">
     <%= f.label :artist_name, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :artist_name, :class => 'form-control', required: true %>
+      <%= f.text_field :artist_name, :class => 'form-control'#, required: true %>
     </div>
     <%=f.error_span(:artist_name) %>
   </div>
